@@ -20,15 +20,30 @@ class ClickCounter extends Component {
         this.setState({count: this.state.count + 1});
     }
 
+    // render() {
+    //     // JSX语法
+    //     return (
+    //       <div>
+    //           <button onClick={this.onClickButton}>Click Me</button>
+    //           <div>
+    //               Click Count: {this.state.count}
+    //           </div>
+    //       </div>
+    //     );
+    // }
+
     render() {
-        // JSX语法
+        const counterStyle = {
+            margin: '16px'
+        };
+
         return (
-          <div>
-              <button onClick={this.onClickButton}>Click Me</button>
-              <div>
-                  Click Count: {this.state.count}
-              </div>
-          </div>
+            <div style={counterStyle}>
+                <button onClick={this.onClickButton}>Click Me</button>
+                <div>
+                    Click Count: <span id="clickCount">{this.state.count}</span>
+                </div>
+            </div>
         );
     }
 }
