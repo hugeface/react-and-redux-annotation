@@ -1,5 +1,5 @@
 // React.PropTypes is deprecated since React 15.5.0, should use the npm module prop-types instead.
-// import React, { Component, PropTypes } from 'react';
+// import React, { Component, PropTypes } from 'react';     // version 15.4.0
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
@@ -16,6 +16,7 @@ class Counter extends Component {
     this.onClickIncrementButton = this.onClickIncrementButton.bind(this);
     this.onClickDecrementButton = this.onClickDecrementButton.bind(this);
 
+    // 初始化state
     this.state = {
       count: props.initValue
     };
