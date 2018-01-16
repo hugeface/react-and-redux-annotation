@@ -17,10 +17,16 @@ const CounterStore = Object.assign({}, EventEmitter.prototype, {
   },
 
   emitChange: function() {
+    /** EventEmitter对象
+     *  nodeJS中的概念，emit方法用于触发事件
+     */
     this.emit(CHANGE_EVENT);
   },
 
   addChangeListener: function(callback) {
+    /**
+     * EventEmitter.on()为事件绑定回调函数
+     */
     this.on(CHANGE_EVENT, callback);
   },
 
