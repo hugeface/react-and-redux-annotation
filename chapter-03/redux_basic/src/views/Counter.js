@@ -43,10 +43,16 @@ class Counter extends Component {
   }
 
   componentDidMount() {
+    /**
+     * 监听Store的变化，只要Store发生变化，就调用onChange方法
+     */
     store.subscribe(this.onChange);
   }
 
   componentWillUnmount() {
+    /**
+     * 注销监听，与subscribe对应
+     */
     store.unsubscribe(this.onChange);
   }
 
