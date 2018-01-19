@@ -40,5 +40,12 @@ function mapDispatchToProps(dispatch, ownProps) {
   }
 }
 
+/**
+ * connect()执行的结果依然是一个函数，所以才可以在后面又加一个圆括号，把connect函数执行的结果立刻执行
+ *
+ * 完成两件事：
+ *  1、把Store上的状态转化为内层傻瓜组件的prop - 内层傻瓜对象的输入
+ *  2、把内层傻瓜组件中的用户动作转化为派送给Store的动作 - 内层傻瓜对象的输出
+ */
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 
